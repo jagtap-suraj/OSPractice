@@ -29,9 +29,9 @@ int main()
         for (j = 0; j < m; j++) 
         {
             if (pSize[i] <= block[j]) 
-            { // Check if process can fit in current block
-                allocation[i] = j; // Allocate process to current block
-                block[j] -= pSize[i]; // Update pSize of current block
+            {
+                allocation[i] = j;
+                block[j] -= pSize[i];
                 break;
             }
         }

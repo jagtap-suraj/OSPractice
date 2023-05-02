@@ -1,4 +1,4 @@
-// Q08. Implement a program for disk scheduling algorithm – LOOK
+// Q09. Implement a program for disk scheduling algorithm - C-LOOK
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,8 +72,15 @@ int main() {
         printf("%d -> ", head);
     }
 
-    // iterate over the requests in the opposite direction
-    for (i = index - direction; i >= 0 && i < n; i -= direction * 2 - 1) 
+    // go to the other end of the disk
+    if (direction == 0)
+        index = n - 1;
+    else
+        index = 0;
+
+    
+    // iterate over the requests in the given direction
+    for (i = index; i >= 0 && i < n; i += direction * 2 - 1) 
     {
         if (visited[i])
             continue;
@@ -90,13 +97,12 @@ int main() {
     return 0;
 }
 
-/*Output:
+/*
+Output:
 Enter the number of requests: 8
-Enter the initial position of the head: 50
 Enter the requests: 176 79 34 60 92 11 41 114
-50 -> 176 -> 79 -> 34 -> 60 -> 92 -> 11 -> 41 -> 114 -> 
-Total seek time: 510
-
-176 79 34 60 92 11 41 114
+Enter the initial position of the head: 50
+Enter the direction (0 for left, 1 for right): 1
+50 -> 60 -> 79 -> 92 -> 114 -> 176 -> 199 -> 0 -> 11 -> 34 -> 41 ->
+Total seek time: 642
 */
-
