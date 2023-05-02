@@ -25,7 +25,7 @@ int main()
 
     for (i = 0; i < n; i++) 
     {
-        allocation[i] = -1; // Initialize allocation array to -1 to indicate unallocated processes
+        allocation[i] = -1;
         for (j = 0; j < m; j++) 
         {
             if (pSize[i] <= block[j]) 
