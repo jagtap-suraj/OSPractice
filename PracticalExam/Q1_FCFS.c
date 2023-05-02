@@ -103,3 +103,30 @@ void printGanttChart(struct process p[], int n)
     }
     printf("%d\t", p[n - 1].completion);
 }
+
+int main()
+{
+    int i, n;
+    // clrscr();
+    printf("Enter the number of processes: ");
+    scanf("%d", &n);
+    struct process p[n];
+    printf("Enter the arrival time and burst time of each process:\n");
+    for(i = 0; i < n; i++)
+    {
+        printf("Process %d:\n", i + 1);
+        p[i].pid = i + 1;
+        printf("Arrival Time: ");
+        scanf("%d", &p[i].arrival);
+        printf("Burst Time: ");
+        scanf("%d", &p[i].burst);
+    }
+    sortProcessesAT(p, n);
+    calculateCompletionTime(p, n);
+    calculateTATWT(p, n);
+    sortProcessesPID(p, n);
+    printProcesses(p, n);
+    printGanttChart(p, n);
+    // getch();
+    return 0;
+}
