@@ -127,7 +127,7 @@ int main()
 
     for(i = 0; i < n; i++)
     {
-        printf("Enter the burst time of process %d: ", i + 1);
+        //printf("Enter the burst time of process %d: ", i + 1);
         scanf("%d", &p[i].burst);
         p[i].pid = i + 1;
     }

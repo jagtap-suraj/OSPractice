@@ -34,7 +34,7 @@ int main() {
             {
                 found = 1;
                 hit++;
-                break;
+                break; //*
             }
 
         if (found == 0) 
@@ -44,8 +44,8 @@ int main() {
             fault++;
         }
         for (k = 0; k < m; k++)
-        printf("%d\t", frame[k]);
-        printf("\n");
+            printf("%d\t", frame[k]);
+        printf("\n"); //*
     }
     printf("Page Fault is %d", fault);
     printf("\nPage Hit is %d", hit);

@@ -23,7 +23,7 @@ int main() {
     // Initialize the frames and time array to -1 to indicate they are empty
     for (i = 0; i < m; i++) {
         frame[i] = -1;
-        time[i] = -1;
+        time[i] = -1; //*
     }
 
     j = 0;
@@ -38,7 +38,7 @@ int main() {
             {
                 found = 1;
                 hit++;
-                time[k] = i; // Update the time array with the current time
+                time[k] = i; // Update the time array with the current time **
                 break;
             }
 

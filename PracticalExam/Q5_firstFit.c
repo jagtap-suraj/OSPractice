@@ -32,7 +32,7 @@ int main()
             {
                 allocation[i] = j;
                 block[j] -= pSize[i];
-                break;
+                break; //**
             }
         }
     }
@@ -44,7 +44,7 @@ int main()
         if (allocation[i] != -1)
             printf("%d\n", allocation[i]+1);
         else
-            printf("Not allocated\n");
+            printf("Not allocated\n"); //**
     }
 
     // getch();

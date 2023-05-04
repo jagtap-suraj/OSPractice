@@ -63,7 +63,7 @@ int main() {
     }
 
     // iterate over the requests in the given direction
-    for (i = index; i >= 0 && i < n; i += direction * 2 - 1) 
+    for (i = index; i >= 0 && i < n; i += direction * 2 - 1)
     {
         current = requests[i];
         seek_time += abs(head - current);
